@@ -16,5 +16,17 @@ Route::get('/welcome', function () {
 })->middleware('auth.basic');
 
 Route::get('/', ['as'=>'home','uses'=>'AppController@index']);
+Auth::routes();
 
-Route::get('/login')
+Route::get('/getLogin', function (){
+    return view('auth.login');
+});
+Route::get('/getRegister', function (){
+    return view('auth.register');
+});
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/profile', function (){
+	return view('auth.profile');
+});
