@@ -20,7 +20,7 @@ Route::get('/', ['as'=>'home','uses'=>'AppController@index']);
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
-Route::post('profile', 'ProfileController@profile')->name('profile');
+Route::get('profile', 'HomeController@profile')->name('profile');
 
 // Registration Routes...
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
