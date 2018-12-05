@@ -38,10 +38,10 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('logout') }}"
+                            <a class="dropdown-item" href="{{ route('profile') }}"
                                onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
-                                {{ __('Profile') }}
+                                             document.getElementById('profile-form').submit();">
+                                {{ __('Perfil') }}
                             </a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
@@ -49,7 +49,7 @@
                                 {{ __('Logout') }}
                             </a>
 
-                            <form id="profile-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            <form id="profile-form" action="{{ route('profile') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
