@@ -15,7 +15,7 @@
                         session ('status')
                     @endif
 
-                    UNIDAD 6 'AUTENTIFICACION'
+                    UNIDAD 6 y 7
                 </div>
             </div>
         </div>

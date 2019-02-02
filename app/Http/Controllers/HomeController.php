@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return response(view('home'))->cookie('cookie', Auth::user()->name, 300);
     }
     public function profile(){
         return view('profile');

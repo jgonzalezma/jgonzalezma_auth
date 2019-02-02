@@ -5,10 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <h1>Mi perfil</h1><br>
-            <h3>User</h3>
-            <h3>Nombre</h3>
-            <h3>Apellido</h3>
-            <h3>Telefono</h3>
+            <h3>User: {{ Auth::user()->name }}</h3>
+            <h3>Email: {{ Auth::user()->email }}</h3>
+            <a href="/editProfile">Editar</a>
         </div>
     </div>
 </div>

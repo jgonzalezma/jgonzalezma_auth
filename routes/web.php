@@ -42,5 +42,9 @@ Route::get('/getRegister', function (){
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/profile', function (){
-	return view('auth.profile');
+	return view('profile');
 });
+
+Route::resource('user', 'UserController');
+Route::get('/editProfile', 'ProfileController@editProfile');
+Route::post('/editProfile/{id}', 'UserController@update')->name('editar');
