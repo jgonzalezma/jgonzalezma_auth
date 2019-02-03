@@ -48,3 +48,20 @@ Route::get('/profile', function (){
 Route::resource('user', 'UserController');
 Route::get('/editProfile', 'ProfileController@editProfile');
 Route::post('/editProfile/{id}', 'UserController@update')->name('editar');
+
+Route::get('/admin', 'UserController@isAdmin');
+Route::get('/listaUsuarios', 'UserController@listarUsuarios');
+
+Route::post('/deleteUser/{id}', 'UserController@destroy')->name('deleteUser');
+
+Route::get('/createUser', function(){
+	return view('createUsuario');
+});
+
+Route::post('/createUser', 'UserController@createUser')->name('createUser');
+Route::post('validate', 'UserController@store');
+
+Route::get('/editUser', function(){
+	return view('editUser');
+});
+Route::post('/editUser/{id}', 'UserController@editUser')->name('editarAdmin');

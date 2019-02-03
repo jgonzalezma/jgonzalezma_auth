@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -23,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return response(view('home'))->cookie('cookie', Auth::user()->name, 300);
+        return response(view('profile'))->cookie('cookie', Auth::user()->name, 300);
     }
     public function profile(){
         return view('profile');
