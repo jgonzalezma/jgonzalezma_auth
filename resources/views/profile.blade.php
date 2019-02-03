@@ -8,7 +8,7 @@
             <h3>User: {{ Auth::user()->name }}</h3>
             <h3>Email: {{ Auth::user()->email }}</h3>
             <a href="/editProfile">Editar</a>
-            @if (Auth::user() && Auth::user()->rol_id == 1)
+            @if (Auth::user() && Auth::user()->rol_id == 2)
             <a href="/admin">Panel de administrador</a>
             @endif
         </div>
