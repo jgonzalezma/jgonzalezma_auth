@@ -11,11 +11,11 @@ class RolSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('rols')->insert([
+        DB::table('roles')->insert([
           'id' => 1,
           'name' => 'normal'
         ]);
-        DB::table('rols')->insert([
+        DB::table('roles')->insert([
           'id' => 2,
           'name' => 'admin'
         ]);
